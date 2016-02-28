@@ -1,0 +1,18 @@
+{% extends 'AcmeWebBundle:Frontend:layout.html.twig' %}
+
+{% block slideshow_full %}
+    <div class="row">
+    </div>
+{% endblock %}
+
+{% block slideshow_sidebar %}
+    <div class="row">
+    </div>
+{% endblock %}
+
+
+{% block content %}
+	<p>Homepage Main action!</p>
+	{{ render( url( 'acme_partial_product_latest', {'limit': 20, 'template': 'AcmeWebBundle:Frontend/Product:latest.html.twig'} )) }}
+
+{% endblock %}

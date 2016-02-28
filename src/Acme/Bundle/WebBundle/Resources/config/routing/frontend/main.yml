@@ -1,0 +1,5 @@
+# This file is part of the Web package.
+
+acme_homepage:
+    path: /
+    defaults: { _controller: acme.controller.frontend.homepage:mainAction }
