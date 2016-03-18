@@ -12,7 +12,7 @@ parameters:
     database_user:     root
     database_password: ~
     # the 'database_path' is only used for SQLite type databases
-    database_path:     '%kernel.root_dir%/data/blog.sqlite'
+    database_path:     '%kernel.root_dir%/data/project.sqlite'
 
     # Uncomment these lines to use a MySQL database instead of SQLite:
     #
