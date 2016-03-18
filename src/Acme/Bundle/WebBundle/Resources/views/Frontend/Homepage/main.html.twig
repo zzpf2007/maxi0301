@@ -1,18 +1,21 @@
-{% extends 'AcmeWebBundle:Frontend:layout.html.twig' %}
+{% extends 'AcmeWebBundle:Frontend:layout_front_index.html.twig' %}
 
-{% block slideshow_full %}
-    <div class="row">
-    </div>
+{% block slideshow %}
+  {% include 'AcmeWebBundle:Frontend/Common:slideshow.html.twig' %}
 {% endblock %}
 
-{% block slideshow_sidebar %}
-    <div class="row">
+{% block pagecontent %}
+  <div class="newsbar">
+    <div class="newsbarinner">
+      ssss
     </div>
-{% endblock %}
-
-
-{% block content %}
-	<p>Homepage Main action!</p>
-	{{ render( url( 'acme_partial_product_latest', {'limit': 20, 'template': 'AcmeWebBundle:Frontend/Product:latest.html.twig'} )) }}
+  </div>
+  <div class="pagewrapper">
+    <div style="padding:20px 0" class="hotproduct">
+      <ul class="hotproductinner">
+        
+      </ul>
+    </div>
+  </div>
 
 {% endblock %}

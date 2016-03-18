@@ -5,6 +5,7 @@ namespace Acme\Bundle\WebBundle\Controller\Frontend;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use AppBundle\Entity\Post;
 
 class ProductController extends FOSRestController
@@ -29,6 +30,11 @@ class ProductController extends FOSRestController
         ;
 
         return $this->handleView($view);
+    }
+
+    public function indexAction( Request $request)
+    {
+        return new Response("Product Index Page!");
     }
 
     public function redirectAction()

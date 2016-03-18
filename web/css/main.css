@@ -1,0 +1,97 @@
+html,body{height:100%;}
+.windowwrapper{
+  min-height: 100%;
+  height: auto !important;
+  position: relative;
+}
+header{
+  position:relative;
+}
+.pagewrapper{
+  width:1182px;
+  margin:0 auto;
+  padding-bottom: 150px;
+}
+.rowwrapper{
+  width:1180px;
+  height:auto;
+  margin:0 auto;
+  position: relative;
+}
+footer{
+  position: absolute;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height:150px;
+  background:#888;
+  min-width: 1182px;
+}
+nav.hmenu{
+  margin-top:1px;
+  height:35px;
+  line-height:35px;
+  background:#61605E;
+  color:#eee;
+  min-width: 1182px;
+}
+nav.hmenu ul li{
+  float:left;
+  width:auto;
+}
+
+nav.hmenu ul li a{
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 35px;
+  font-size: 14px;
+  color: #fff;
+  display: block;
+}
+nav.hmenu ul li a:hover,nav.hmenu ul li a:active,.hmenu ul li a.current{
+  text-decoration: underline;
+  background-color: #d2332f;
+}
+ .submenu{
+  border-radius:0 0 10px 10px;
+  overflow:hidden;
+  transition: all .3s ease-in .1s;
+  position: absolute;
+  min-width:200px;
+  color:#666;
+  height:0px;
+  z-index:120;
+}
+
+li:hover .submenu{
+  background-color: #fff;
+  height:170px;
+  z-index: 121;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  border-color:#d2332f;
+  -moz-box-shadow: 0px 5px 5px #333; 
+  box-shadow: 0px 5px 5px #333;
+}
+
+.submenu .submenuinner{
+  border-top:5px solid #d2332f;
+  min-height: 35px;
+  line-height:35px;
+  padding:0 10px 10px 10px;
+}
+
+.newsbar{
+  width: 100%;
+  min-width:1182px;
+  height: 38px;
+  line-height: 38px;
+  display: block;
+  position: relative;
+}
+.newsbarinner{
+  margin:1.5px 15px;
+}
+.hotproduct{
+  padding:20px ;
+}
