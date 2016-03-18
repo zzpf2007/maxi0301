@@ -34,10 +34,10 @@
                 <div class="navbar navbar-default navbar-static-top" role="navigation">
                     <div class="container">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="{{ path('homepage') }}">
+                            {# <a class="navbar-brand" href="{{ path('homepage') }}">
                                 Symfony Demo
                             </a>
-
+ #}
                             <button type="button" class="navbar-toggle"
                                     data-toggle="collapse"
                                     data-target=".navbar-collapse">
@@ -52,9 +52,9 @@
 
                                 {% block header_navigation_links %}
                                     <li>
-                                        <a href="{{ path('blog_index') }}">
+                                        {# <a href="{{ path('blog_index') }}">
                                             <i class="fa fa-home"></i> {{ 'menu.homepage'|trans }}
-                                        </a>
+                                        </a> #}
                                     </li>
 
                                     {# The 'app.user' condition is required to avoid issues in 404 and 500 error pages

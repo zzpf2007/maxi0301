@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Acme\Bundle\WebBundle\AcmeWebBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new Acme\Bundle\ProductBundle\AcmeProductBundle(),
         );
 
         // Some bundles are only used while developing the application or during
