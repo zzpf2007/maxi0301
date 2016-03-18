@@ -51,5 +51,7 @@ class HomepageController extends Controller
 
     return $this->render( $template, array( 'products' => $product_array ));
     // return array();
-  }    
+  }
+
+  
 }

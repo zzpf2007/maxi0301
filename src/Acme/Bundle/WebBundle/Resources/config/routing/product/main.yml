@@ -1,0 +1,7 @@
+acme_myproduct_index:
+    path: /
+    defaults:
+        _controller: acme.controller.frontend.product:indexAction
+        # _acme:
+        #     limit: $limit
+        #     template: $template

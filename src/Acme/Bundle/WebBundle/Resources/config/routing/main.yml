@@ -8,6 +8,11 @@ acme_backend:
     prefix: /admin
 
 acme_partial:
+    resource: @AcmeWebBundle/Resources/config/routing/product/main.yml
+    prefix: /product
+
+acme_partial:
     resource: @AcmeWebBundle/Resources/config/routing/partial/main.yml
     prefix: /_partial
+
 
