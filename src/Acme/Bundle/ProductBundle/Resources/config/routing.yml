@@ -1,3 +1,12 @@
+# acme_product_homepage:
+#     path:     /
+#     defaults: { _controller: AcmeProductBundle:Default:index }
+
 acme_product_homepage:
-    path:     /
-    defaults: { _controller: AcmeProductBundle:Default:index }
+    resource: @AcmeProductBundle/Resources/config/routing/product.yml
+    prefix: /product
+
+acme_product_serie_home:
+    resource: @AcmeProductBundle/Resources/config/routing/serie.yml
+    prefix: /serie
+

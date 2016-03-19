@@ -4,23 +4,19 @@ namespace Acme\Bundle\ProductBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 use Acme\Bundle\ProductBundle\Entity\Product;
 use Acme\Bundle\ProductBundle\Form\ProductType;
 
 /**
  * Product controller.
  *
- * @Route("/product")
  */
 class ProductController extends Controller
 {
     /**
      * Lists all Product entities.
      *
-     * @Route("/", name="product_index")
-     * @Method("GET")
      */
     public function indexAction()
     {
@@ -36,14 +32,12 @@ class ProductController extends Controller
     /**
      * Creates a new Product entity.
      *
-     * @Route("/new", name="product_new")
-     * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
     {
         $product = new Product();
-        $form = $this->createForm(new ProductType(), $product);
-        $form->handleRequest($request);
+        $form = $this->createForm('acme_product_type', $product);
+        $form->handleRequest();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
@@ -62,11 +56,20 @@ class ProductController extends Controller
     /**
      * Finds and displays a Product entity.
      *
-     * @Route("/{id}", name="product_show")
-     * @Method("GET")
      */
     public function showAction(Product $product)
     {
+        $serie = $product->getSerie();
+
+        if(!$serie){
+            $em = $this->getDoctrine()->getManager();
+            $serie = $em->getRepository('AcmeProductBundle:Serie')->findAll()[0];
+
+            $product->setSerie($serie);
+            $em->persist($product);
+            $em->flush();
+        }
+
         $deleteForm = $this->createDeleteForm($product);
 
         return $this->render('product/show.html.twig', array(
@@ -78,14 +81,12 @@ class ProductController extends Controller
     /**
      * Displays a form to edit an existing Product entity.
      *
-     * @Route("/{id}/edit", name="product_edit")
-     * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Product $product)
     {
         $deleteForm = $this->createDeleteForm($product);
-        $editForm = $this->createForm(new ProductType(), $product);
-        $editForm->handleRequest($request);
+        $editForm = $this->createForm('acme_product_type', $product);
+        $editForm->handleRequest();
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
@@ -105,8 +106,6 @@ class ProductController extends Controller
     /**
      * Deletes a Product entity.
      *
-     * @Route("/{id}", name="product_delete")
-     * @Method("DELETE")
      */
     public function deleteAction(Request $request, Product $product)
     {

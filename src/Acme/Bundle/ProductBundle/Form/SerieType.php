@@ -5,9 +5,8 @@ namespace Acme\Bundle\ProductBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Acme\Bundle\ProductBundle\Form\SerieType;
 
-class ProductType extends AbstractType
+class SerieType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -17,11 +16,7 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('name')
-            // ->add('serie', new SerieType())
-            // ->add('serie', 'acme_serie_type')
         ;
-
-        $builder->add("serie", 'acme_serie_type');
     }
     
     /**
@@ -30,7 +25,7 @@ class ProductType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Acme\Bundle\ProductBundle\Entity\Product'
+            'data_class' => 'Acme\Bundle\ProductBundle\Entity\Serie'
         ));
     }
     /**
@@ -38,7 +33,7 @@ class ProductType extends AbstractType
      */
     public function getName()
     {
-        return 'acme_product_type';
+        return 'acme_serie_type';
     }
     
 }
