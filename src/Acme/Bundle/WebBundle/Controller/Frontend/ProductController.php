@@ -34,7 +34,8 @@ class ProductController extends FOSRestController
 
     public function indexAction( Request $request)
     {
-        return new Response("Product Index Page!");
+        // return new Response("Product Index Page!");
+        return $this->render('AcmeWebBundle:Frontend/Product:main.html.twig');
     }
 
     public function redirectAction()

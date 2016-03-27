@@ -10,7 +10,7 @@ header{
 .pagewrapper{
   width:1182px;
   margin:0 auto;
-  padding-bottom: 150px;
+  padding-bottom: 360px;
 }
 .rowwrapper{
   width:1180px;
@@ -23,10 +23,25 @@ footer{
   left:0;
   bottom:0;
   width: 100%;
-  height:150px;
-  background:#888;
+  min-height:360px;
   min-width: 1182px;
+  color: #fff;
 }
+footer h2{
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+footer .columns{
+  width:138px;
+  height: auto;
+  float: left;
+}
+footer .columns li{
+  min-height: 22px;
+  line-height: 22px;
+}
+
 nav.hmenu{
   margin-top:1px;
   height:35px;
@@ -80,18 +95,14 @@ li:hover .submenu{
   line-height:35px;
   padding:0 10px 10px 10px;
 }
-
-.newsbar{
-  width: 100%;
-  min-width:1182px;
-  height: 38px;
-  line-height: 38px;
-  display: block;
-  position: relative;
-}
-.newsbarinner{
-  margin:1.5px 15px;
-}
-.hotproduct{
-  padding:20px ;
+.grad-e6{background: -o-linear-gradient(#fff, #e6e6e6);background: -moz-linear-gradient(#fff, #e6e6e6);background: linear-gradient(#fff, #e6e6e6);}
+.grad-ec{background: -o-linear-gradient(#fff, #ececec);background: -moz-linear-gradient(#fff, #ececec);background: linear-gradient(#fff, #ececec);}
+.grad-ed{background: -o-linear-gradient(#fff, #ededed);background: -moz-linear-gradient(#fff, #ededed);background: linear-gradient(#fff, #ededed);}
+.grad-ef{background: -o-linear-gradient(#fff, #efefef);background: -moz-linear-gradient(#fff, #efefef);background: linear-gradient(#fff, #efefef);}
+.texture-gray-3{
+  background-color: #888;
+  background-image: linear-gradient(45deg, #999 25%, transparent 25%, transparent 75%, #999 75%,#999),
+  linear-gradient(45deg, #999 25%, transparent 25%, transparent 75%, #999 75%, #999);
+  background-size: 3px 3px;
+  background-position: 0 0, 1.5px 1.5px;
 }
