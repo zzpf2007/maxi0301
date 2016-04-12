@@ -37,11 +37,14 @@ class ProductController extends Controller
     {
         $product = new Product();
         $form = $this->createForm('acme_product_type', $product);
+<<<<<<< HEAD
         // $form = $this->createForm( new ProductType(), $product );
         // $form = $this->createFormBuilder($product)
         //              ->add('name')
         //              ->getForm();
         // $form->handleRequest($request);
+=======
+>>>>>>> a26644011d197660a8d21476e232be81125841b3
         $form->handleRequest();
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -64,6 +67,17 @@ class ProductController extends Controller
      */
     public function showAction(Product $product)
     {
+        $serie = $product->getSerie();
+
+        if(!$serie){
+            $em = $this->getDoctrine()->getManager();
+            $serie = $em->getRepository('AcmeProductBundle:Serie')->findAll()[0];
+
+            $product->setSerie($serie);
+            $em->persist($product);
+            $em->flush();
+        }
+
         $deleteForm = $this->createDeleteForm($product);
 
         return $this->render('product/show.html.twig', array(
@@ -80,7 +94,11 @@ class ProductController extends Controller
     {
         $deleteForm = $this->createDeleteForm($product);
         $editForm = $this->createForm('acme_product_type', $product);
+<<<<<<< HEAD
         $editForm->handleRequest($request);
+=======
+        $editForm->handleRequest();
+>>>>>>> a26644011d197660a8d21476e232be81125841b3
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();

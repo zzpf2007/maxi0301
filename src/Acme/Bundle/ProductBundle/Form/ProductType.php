@@ -5,6 +5,7 @@ namespace Acme\Bundle\ProductBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Acme\Bundle\ProductBundle\Form\SerieType;
 
 class ProductType extends AbstractType
 {
@@ -16,8 +17,10 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('serie', 'choice')
-        ;
+            // ->add('serie', 'choice')
+       ;
+
+        $builder->add("serie", 'acme_serie_type');
     }
     
     /**

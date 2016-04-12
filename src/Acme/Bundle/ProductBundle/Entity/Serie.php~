@@ -20,15 +20,12 @@ class Serie
      */
     private $name;
 
-    /**
-     * @ORM\OneToMany(targetEntity="Product", mappedBy="serie", cascade={"persist", "remove"})
-     */
     protected $products;
-
 
     /**
      * Constructor
      */
+
     public function __construct()
     {
         $this->products = new \Doctrine\Common\Collections\ArrayCollection();

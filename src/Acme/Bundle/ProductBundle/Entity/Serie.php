@@ -5,26 +5,22 @@ namespace Acme\Bundle\ProductBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Acme\Bundle\ProductBundle\Entity\Product;
 
-/**
- * Serie
- */
 class Serie
 {
     /**
      * @var int
-     */
+    */
     private $id;
 
     /**
      * @var string
-     */
+    */
     private $name;
 
     /**
      * @ORM\OneToMany(targetEntity="Product", mappedBy="serie", cascade={"persist", "remove"})
      */
     protected $products;
-
 
     /**
      * Constructor

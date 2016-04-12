@@ -5,7 +5,6 @@ namespace Acme\Bundle\ProductBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Acme\Bundle\ProductBundle\Entity\Serie;
 
-
 class Product
 {
     /**
@@ -19,7 +18,7 @@ class Product
     private $name;
 
     /**
-     */
+    */
     protected $serie; 
 
     /**
