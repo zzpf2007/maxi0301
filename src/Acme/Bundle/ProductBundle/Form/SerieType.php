@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ProductType extends AbstractType
+class SerieType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -16,7 +16,6 @@ class ProductType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('serie', 'choice')
         ;
     }
     
@@ -26,15 +25,15 @@ class ProductType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Acme\Bundle\ProductBundle\Entity\Product'
+            'data_class' => 'Acme\Bundle\ProductBundle\Entity\Serie'
         ));
     }
-
     /**
      * @return string
      */
     public function getName()
     {
-        return 'acme_product_type';
+        return 'acme_serie_type';
     }
+    
 }

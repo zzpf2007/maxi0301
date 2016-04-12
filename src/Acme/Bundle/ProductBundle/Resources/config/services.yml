@@ -1,4 +1,11 @@
 services:
-#    acme_product.example:
-#        class: Acme\Bundle\ProductBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    acme_product_type:
+        class: Acme\Bundle\ProductBundle\Form\ProductType
+        tags: 
+            -  { name: form.type, alias: 'acme_product_type' }
+
+    acme_serie_type:
+        class: Acme\Bundle\ProductBundle\Form\SerieType
+        tags: 
+            -  { name: form.type, alias: 'acme_serie_type' }
+

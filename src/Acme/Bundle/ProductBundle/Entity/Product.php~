@@ -54,27 +54,32 @@ class Product
     {
         return $this->name;
     }
+    /**
+     * @var \Acme\Bundle\ProductBundle\Entity\Serie
+     */
+    private $parent;
+
 
     /**
-     * Set serie
+     * Set parent
      *
-     * @param \Acme\Bundle\ProductBundle\Entity\Serie $serie
+     * @param \Acme\Bundle\ProductBundle\Entity\Serie $parent
      * @return Product
      */
-    public function setSerie(\Acme\Bundle\ProductBundle\Entity\Serie $serie = null)
+    public function setParent(\Acme\Bundle\ProductBundle\Entity\Serie $parent = null)
     {
-        $this->serie = $serie;
+        $this->parent = $parent;
 
         return $this;
     }
 
     /**
-     * Get serie
+     * Get parent
      *
      * @return \Acme\Bundle\ProductBundle\Entity\Serie 
      */
-    public function getSerie()
+    public function getParent()
     {
-        return $this->serie;
+        return $this->parent;
     }
 }

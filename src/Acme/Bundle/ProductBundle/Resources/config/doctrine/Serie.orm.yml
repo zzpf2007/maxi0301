@@ -1,0 +1,20 @@
+Acme\Bundle\ProductBundle\Entity\Serie:
+    type: entity
+    table: serie
+    repositoryClass: Acme\Bundle\ProductBundle\Repository\SerieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    oneToMany:
+        products:
+            targetEntity: Product
+            mappedBy: serie
+            cascade: ["persist", "merge"]
+    lifecycleCallbacks: {  }
