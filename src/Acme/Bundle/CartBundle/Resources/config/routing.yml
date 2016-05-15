@@ -1,0 +1,4 @@
+acme_cart_cart:
+    resource: "@AcmeCartBundle/Resources/config/routing/cart.yml"
+    prefix:   /cart
+
