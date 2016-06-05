@@ -1,0 +1,4 @@
+acme_order_purchaseorder:
+    resource: "@AcmeOrderBundle/Resources/config/routing/purchaseorder.yml"
+    prefix:   /purchaseorder
+
