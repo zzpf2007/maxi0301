@@ -1,0 +1,13 @@
+# This file is part of the Web package.
+
+acme_myaccount_dashboard:
+    path: /
+    defaults: { _controller: "AcmeAccountBundle:Account:index" }
+
+acme_myaccount_order_actions:
+    resource: @AcmeWebBundle/Resources/config/routing/myaccount/order.yml
+    prefix: /order
+
+acme_myaccount_cart_actions:
+    resource: @AcmeWebBundle/Resources/config/routing/myaccount/cart.yml
+    prefix: /cart

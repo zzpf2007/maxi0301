@@ -7,6 +7,14 @@ acme_backend:
     resource: @AcmeWebBundle/Resources/config/routing/backend/main.yml
     prefix: /admin
 
+acme_myaccount:
+    resource: @AcmeWebBundle/Resources/config/routing/myaccount/main.yml
+    prefix: /myaccount
+
+acme_webbundle_cpanel:
+    resource: @AcmeWebBundle/Resources/config/routing/cpanel/main.yml
+    prefix: /cpanel
+
 # acme_partial:
 #     resource: @AcmeWebBundle/Resources/config/routing/product/main.yml
 #     prefix: /product

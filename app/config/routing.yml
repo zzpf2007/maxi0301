@@ -1,18 +1,18 @@
 acme_order:
     resource: "@AcmeOrderBundle/Resources/config/routing.yml"
-    prefix:   /cpanel
+    prefix:   /
 
 acme_account:
     resource: "@AcmeAccountBundle/Resources/config/routing.xml"
-    prefix:   /cpanel
+    prefix:   /
 
 acme_cart:
     resource: "@AcmeCartBundle/Resources/config/routing.yml"
-    prefix:   /cpanel
+    prefix:   /
 
 acme_product:
     resource: "@AcmeProductBundle/Resources/config/routing.yml"
-    prefix:   /cpanel
+    prefix:   /
 
 acme_web:
     resource: "@AcmeWebBundle/Resources/config/routing/main.yml"

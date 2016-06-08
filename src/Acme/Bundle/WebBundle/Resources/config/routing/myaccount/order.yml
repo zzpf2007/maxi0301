@@ -1,0 +1,24 @@
+myaccount_purchaseorder_index:
+    path:     /
+    defaults: { _controller: "AcmeOrderBundle:PurchaseOrder:index" }
+    methods:  GET
+
+myaccount_purchaseorder_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeOrderBundle:PurchaseOrder:show" }
+    methods:  GET
+
+myaccount_purchaseorder_new:
+    path:     /new
+    defaults: { _controller: "AcmeOrderBundle:PurchaseOrder:new" }
+    methods:  [GET, POST]
+
+myaccount_purchaseorder_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeOrderBundle:PurchaseOrder:edit" }
+    methods:  [GET, POST]
+
+myaccount_purchaseorder_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeOrderBundle:PurchaseOrder:delete" }
+    methods:  DELETE
